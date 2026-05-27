@@ -18,856 +18,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- Google Translate -->
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'ru',
-    includedLanguages: 'ru,uz,en',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'google_translate_element');
-}
-</script>
-
-<style>
-:root {
-  --navy: #1a2b47;
-  --navy-dark: #0f1d32;
-  --navy-mid: #1e3354;
-  --gold: #d4930a;
-  --gold-light: #e8a915;
-  --gold-btn: #c8880a;
-  --teal: #1a7a6e;
-  --white: #ffffff;
-  --light-bg: #f0f2f5;
-  --text-dark: #1a2b47;
-  --text-gray: #555;
-  --border: #e0e4ea;
-  --card-bg: #ffffff;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--text-dark);
-  background: var(--white);
-  overflow-x: hidden;
-}
-
-/* HEADER */
-header {
-  background: #fff;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.header-inner {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 24px;
-  height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.logo-icon {
-  width: 44px;
-  height: 44px;
-}
-
-.logo-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 1.25;
-  color: var(--navy);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.header-phone {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  color: var(--navy);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.header-phone svg { color: var(--navy); }
-
-.social-btn {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.social-btn.wa { background: #25d366; }
-.social-btn.tg { background: #0088cc; }
-
-.lang-switcher {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.lang-btn {
-  padding: 4px 6px;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--text-dark);
-}
-
-.lang-btn.active {
-  background: var(--navy);
-  color: #fff;
-}
-
-.btn-consult {
-  background: var(--gold);
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.2s;
-}
-
-.btn-consult:hover { background: var(--gold-light); }
-
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 40%, #1e3a5a 100%);
-  min-height: calc(100vh - 68px);
-  display: flex;
-  align-items: center;
-  padding: 60px 24px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(30,60,100,0.5) 0%, transparent 60%);
-}
-
-.hero-inner {
-  max-width: 1300px;
-  margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 56px;
-  line-height: 1.05;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.hero-subtitle-label {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 3px;
-  color: #8aa8c8;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 20px;
-  padding: 8px 16px;
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 28px;
-}
-
-.hero-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 28px;
-  color: #fff;
-  line-height: 1.3;
-  margin-bottom: 16px;
-}
-
-.hero-desc {
-  color: #94b4cc;
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.btn-primary {
-  background: var(--gold);
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  padding: 14px 28px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.btn-primary:hover { background: var(--gold-light); }
-
-.btn-outline {
-  background: transparent;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  padding: 14px 28px;
-  border-radius: 8px;
-  border: 2px solid rgba(255,255,255,0.4);
-  cursor: pointer;
-  text-decoration: none;
-  transition: border-color 0.2s;
-}
-
-.btn-outline:hover { border-color: #fff; }
-
-.hero-features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.hero-feat {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
-  padding: 16px;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.4;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.hero-feat svg { flex-shrink: 0; margin-top: 2px; }
-
-/* SECTIONS */
-section { padding: 80px 24px; }
-
-.section-inner { max-width: 1300px; margin: 0 auto; }
-
-.section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 36px;
-  text-align: center;
-  color: var(--text-dark);
-  margin-bottom: 12px;
-}
-
-.section-desc {
-  text-align: center;
-  color: var(--text-gray);
-  font-size: 16px;
-  margin-bottom: 48px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* PROBLEMS */
-.problems { background: var(--light-bg); }
-
-.problems-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.problem-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 28px 24px;
-  border: 1px solid var(--border);
-}
-
-.problem-icon {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 12px;
-  color: var(--gold);
-}
-
-.problem-card p {
-  font-size: 15px;
-  color: var(--text-dark);
-  line-height: 1.5;
-}
-
-.problems-note {
-  text-align: center;
-  font-size: 15px;
-  color: var(--text-dark);
-}
-
-.problems-note strong { font-weight: 700; }
-.problems-note span { color: var(--gold); }
-
-/* SERVICES */
-.services { background: #fff; }
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.service-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px 24px;
-  transition: box-shadow 0.2s;
-}
-
-.service-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-
-.service-icon-wrap {
-  width: 52px;
-  height: 52px;
-  background: var(--navy);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  color: #fff;
-}
-
-.service-card h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--text-dark);
-  line-height: 1.4;
-}
-
-/* WHY US */
-.why { background: var(--light-bg); }
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.why-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 28px 24px;
-  border: 1px solid var(--border);
-}
-
-.why-icon-wrap {
-  width: 52px;
-  height: 52px;
-  background: var(--gold);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  color: #fff;
-}
-
-.why-card h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.why-card p { font-size: 14px; color: var(--text-gray); }
-
-/* HOW WE WORK */
-.how { background: #fff; }
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.step-card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px 20px;
-}
-
-.step-num {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 40px;
-  color: var(--navy);
-  margin-bottom: 8px;
-}
-
-.step-card h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  margin-bottom: 10px;
-}
-
-.step-card p { font-size: 13px; color: var(--text-gray); line-height: 1.6; }
-
-.who-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.who-desc { text-align: center; color: var(--text-gray); font-size: 15px; margin-bottom: 28px; }
-
-.tags-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.tag {
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 14px;
-  color: var(--text-dark);
-}
-
-/* WHEN */
-.when { background: var(--light-bg); }
-
-.when-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.when-item {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 15px;
-}
-
-.when-icon {
-  width: 36px;
-  height: 36px;
-  background: var(--gold);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: #fff;
-}
-
-/* TRUST */
-.trust { background: #fff; }
-
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-.client-item {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 18px 12px;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  color: var(--text-dark);
-}
-
-/* CTA FORM */
-.cta {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-  padding: 80px 24px;
-}
-
-.cta-inner { max-width: 1300px; margin: 0 auto; }
-
-.cta-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: 40px;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.cta-desc { text-align: center; color: #94b4cc; font-size: 16px; margin-bottom: 40px; }
-
-.form-wrap {
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.form-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.form-group { margin-bottom: 20px; }
-
-.form-group label {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text-dark);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 14px 16px;
-  font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
-  color: var(--text-dark);
-  outline: none;
-  transition: border-color 0.2s;
-  background: #fff;
-}
-
-.form-group input:focus,
-.form-group textarea:focus { border-color: var(--navy); }
-
-.form-group textarea { height: 100px; resize: vertical; }
-
-.form-hint { font-size: 12px; color: var(--text-gray); margin-top: 4px; }
-
-.btn-submit {
-  width: 100%;
-  background: var(--gold);
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 16px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s;
-  margin-top: 8px;
-}
-
-.btn-submit:hover { background: var(--gold-light); }
-
-.form-privacy {
-  text-align: center;
-  font-size: 12px;
-  color: var(--text-gray);
-  margin-top: 12px;
-}
-
-/* FAQ */
-.faq { background: var(--light-bg); }
-
-.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-
-.faq-item {
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-}
-
-.faq-q {
-  padding: 20px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 15px;
-  user-select: none;
-}
-
-.faq-q svg { flex-shrink: 0; transition: transform 0.3s; }
-.faq-item.open .faq-q svg { transform: rotate(180deg); }
-
-.faq-a {
-  padding: 0 24px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s;
-  font-size: 14px;
-  color: var(--text-gray);
-  line-height: 1.7;
-}
-
-.faq-item.open .faq-a {
-  max-height: 200px;
-  padding: 0 24px 20px;
-}
-
-/* FOOTER */
-footer {
-  background: var(--navy-dark);
-  padding: 60px 24px 24px;
-}
-
-.footer-inner {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.footer-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 40px;
-}
-
-.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-
-.footer-logo-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.footer-tagline { color: #94b4cc; font-size: 14px; line-height: 1.6; }
-
-.footer-contacts { display: flex; flex-direction: column; gap: 14px; }
-
-.footer-contact {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #94b4cc;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.footer-contact svg { color: var(--gold); flex-shrink: 0; }
-.footer-contact:hover { color: #fff; }
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  text-align: center;
-  color: #6a8aaa;
-  font-size: 13px;
-}
-
-/* MODAL */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-
-.modal-overlay.open { opacity: 1; pointer-events: all; }
-
-.modal {
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px;
-  max-width: 500px;
-  width: 100%;
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #999;
-  font-size: 24px;
-  line-height: 1;
-}
-
-.success-msg {
-  text-align: center;
-  padding: 20px 0;
-}
-
-.success-msg svg { color: #22c55e; margin-bottom: 16px; }
-
-.success-msg h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.success-msg p { color: var(--text-gray); font-size: 15px; }
-
-/* RESPONSIVE — TABLET (≤1024px) */
-@media (max-width: 1024px) {
-  .hero-title { font-size: 42px; }
-  .problems-grid, .services-grid, .why-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps-grid { grid-template-columns: repeat(2, 1fr); }
-  .clients-grid { grid-template-columns: repeat(3, 1fr); }
-
-  /* Tablet header: hide phone, keep logo + socials + lang + consult btn */
-  .header-phone { display: none; }
-  .header-inner { height: 60px; }
-}
-
-/* RESPONSIVE — MOBILE (≤768px) */
-@media (max-width: 768px) {
-  /* ── Header ── */
-  .header-inner {
-    height: 56px;
-    padding: 0 16px;
-  }
-  .logo-text { font-size: 11px; }
-  .logo-icon { width: 36px; height: 36px; }
-  .header-phone { display: none; }
-  /* Hide consult button on mobile, keep socials + lang */
-  .btn-consult { display: none; }
-  .social-btn { width: 34px; height: 34px; }
-  .header-right { gap: 8px; }
-
-  /* ── Hero ── */
-  .hero { padding: 40px 16px; min-height: unset; }
-  .hero-inner { grid-template-columns: 1fr; gap: 28px; }
-  .hero-title { font-size: 32px; }
-  .hero-heading { font-size: 20px; }
-  .hero-features { grid-template-columns: 1fr; gap: 8px; }
-  .hero-btns { flex-direction: column; }
-  .btn-primary, .btn-outline { width: 100%; text-align: center; padding: 14px 20px; }
-
-  /* ── Sections ── */
-  section { padding: 52px 16px; }
-  .section-title { font-size: 26px; }
-  .cta-title { font-size: 24px; }
-  .who-title { font-size: 26px; }
-  .problems-grid, .services-grid, .why-grid { grid-template-columns: 1fr; }
-  .steps-grid { grid-template-columns: 1fr; }
-  .when-grid { grid-template-columns: 1fr; }
-  .clients-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-top { grid-template-columns: 1fr; gap: 32px; }
-  .form-wrap { padding: 24px 16px; }
-}
-
-.hero-left { order: 1; }
-.hero-features { order: 2; }
-.goog-te-banner-frame { display: none !important; }
-body { top: 0 !important; }
-.skiptranslate { display: none !important; }
-#google_translate_element { display: none; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T45L463L"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
 <div id="google_translate_element"></div>
 
@@ -1028,13 +185,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="service-icon-wrap">
           <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         </div>
-        <h3 data-ru="Переговоры с должниками" data-uz="Карздорлар билан музокарalar">Переговоры с должниками</h3>
+        <h3 data-ru="Переговоры с должниками" data-uz="Карздорлар билан музокаралар">Переговоры с должниками</h3>
       </div>
       <div class="service-card">
         <div class="service-icon-wrap">
           <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
         </div>
-        <h3 data-ru="Взыскание задолженности по договорам поставки, услуг, займа и подряда" data-uz="Етказиб бериш, хизмат кursatish, карз ва пудрат шартномалари буйича карзни ундириш">Взыскание задолженности по договорам поставки, услуг, займа и подряда</h3>
+        <h3 data-ru="Взыскание задолженности по договорам поставки, услуг, займа и подряда" data-uz="Етказиб бериш, хизмат, карз ва пудрат шартномалари буйича карзни ундириш">Взыскание задолженности по договорам поставки, услуг, займа и подряда</h3>
       </div>
     </div>
   </div>
@@ -1046,53 +203,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="section-title" data-ru="Почему выбирают нас" data-uz="Нима учун бизни танлашади">Почему выбирают нас</h2>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon-wrap">
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-        </div>
+        <div class="why-icon-wrap"><svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
         <h3 data-ru="10+ лет практики" data-uz="10+ йиллик тажриба">10+ лет практики</h3>
-        <p data-ru="Опыт работы и сопровождения бизнеса более 10 лет" data-uz="10 йилдан ортик бизнесни бошqarish va kuollb-quvvatlash tajribasi">Опыт работы и сопровождения бизнеса более 10 лет</p>
+        <p data-ru="Опыт работы и сопровождения бизнеса более 10 лет" data-uz="10 йилдан ортик бизнесни куллаб-кувватлаш тажрибаси">Опыт работы и сопровождения бизнеса более 10 лет</p>
       </div>
       <div class="why-card">
-        <div class="why-icon-wrap">
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
+        <div class="why-icon-wrap"><svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
         <h3 data-ru="Команда адвокатов и юристов" data-uz="Адвокатлар ва юристлар жамоаси">Команда адвокатов и юристов</h3>
         <p data-ru="Профильные специалисты по экономическим спорам" data-uz="Иктисодий низолар буйича профессионал мутахассислар">Профильные специалисты по экономическим спорам</p>
       </div>
       <div class="why-card">
-        <div class="why-icon-wrap">
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
+        <div class="why-icon-wrap"><svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
         <h3 data-ru="Специализация" data-uz="Ихтисослашув">Специализация</h3>
         <p data-ru="Экономические и хозяйственные споры" data-uz="Иктисодий ва хужалик низолари">Экономические и хозяйственные споры</p>
       </div>
       <div class="why-card">
-        <div class="why-icon-wrap">
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
+        <div class="why-icon-wrap"><svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
         <h3 data-ru="Опыт взыскания" data-uz="Ундириш тажрибаси">Опыт взыскания</h3>
         <p data-ru="Практика взыскания задолженности для бизнеса" data-uz="Бизнес учун карзни ундириш тажрибаси">Практика взыскания задолженности для бизнеса</p>
       </div>
       <div class="why-card">
-        <div class="why-icon-wrap">
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-        </div>
+        <div class="why-icon-wrap"><svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
         <h3 data-ru="Представление в судах" data-uz="Судларда вакиллик">Представление в судах</h3>
         <p data-ru="Защита интересов бизнеса на всех инстанциях" data-uz="Барча инстанцияларда бизнес манфаатларини химоя килиш">Защита интересов бизнеса на всех инстанциях</p>
       </div>
       <div class="why-card">
-        <div class="why-icon-wrap">
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-        </div>
+        <div class="why-icon-wrap"><svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
         <h3 data-ru="Комплексное сопровождение" data-uz="Комплекс куллаб-кувватлаш">Комплексное сопровождение</h3>
-        <p data-ru="До исполнения решения суда и фактического взыскания" data-uz="Суд карори ижро этилгунга ва хакикiy ундirish amalga oshirilguncha">До исполнения решения суда и фактического взыскания</p>
+        <p data-ru="До исполнения решения суда и фактического взыскания" data-uz="Суд карори ижро этилгунга ва хакикий ундиришгача">До исполнения решения суда и фактического взыскания</p>
       </div>
       <div class="why-card">
-        <div class="why-icon-wrap">
-          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        </div>
+        <div class="why-icon-wrap"><svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
         <h3 data-ru="Конфиденциальность" data-uz="Махфийлик">Конфиденциальность</h3>
-        <p data-ru="Защита деловой репутации клиента" data-uz="Мижознинг иш репутациясini himoya qilish">Защита деловой репутации клиента</p>
+        <p data-ru="Защита деловой репутации клиента" data-uz="Мижознинг иш репутациясини химоя килиш">Защита деловой репутации клиента</p>
       </div>
     </div>
   </div>
@@ -1106,22 +249,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="step-card">
         <div class="step-num">01</div>
         <h3 data-ru="Анализ документов" data-uz="Хужжатларни тахлил килиш">Анализ документов</h3>
-        <p data-ru="Изучаем договоры, переписку, счета и иные подтверждающие документы." data-uz="Шартномалар, ёзишмалар, хисоб-китоблар ва бошqa tasdiqlovchi hujjatlarni urganamiz.">Изучаем договоры, переписку, счета и иные подтверждающие документы.</p>
+        <p data-ru="Изучаем договоры, переписку, счета и иные подтверждающие документы." data-uz="Шартномалар, ёзишмалар, хисоб-китоблар ва бошка тасдикловчи хужжатларни урганамиз.">Изучаем договоры, переписку, счета и иные подтверждающие документы.</p>
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
         <h3 data-ru="Досудебная работа" data-uz="Судгача иш">Досудебная работа</h3>
-        <p data-ru="Готовим претензии, ведём переговоры и принимаем меры для добровольного погашения." data-uz="Даъволар тайёрлаймиз, музокаралар олиб борамиз ва ихтиёрий тулашga choralar корамиз.">Готовим претензии, ведём переговоры и принимаем меры для добровольного погашения.</p>
+        <p data-ru="Готовим претензии, ведём переговоры и принимаем меры для добровольного погашения." data-uz="Даъволар тайёрлаймиз, музокаралар олиб борамиз ва ихтиёрий тулашга choralar корамиз.">Готовим претензии, ведём переговоры и принимаем меры для добровольного погашения.</p>
       </div>
       <div class="step-card">
         <div class="step-num">03</div>
         <h3 data-ru="Судебное взыскание" data-uz="Суд оркали ундириш">Судебное взыскание</h3>
-        <p data-ru="Представляем интересы в экономическом суде и сопровождаем процесс взыскания." data-uz="Иктисодий судda манфаатларни вакиллик киламиз ва ундириш jarayonini kuzatamiz.">Представляем интересы в экономическом суде и сопровождаем процесс взыскания.</p>
+        <p data-ru="Представляем интересы в экономическом суде и сопровождаем процесс взыскания." data-uz="Иктисодий судда манфаатларни вакиллик киламиз ва ундириш жараёнини кузатамиз.">Представляем интересы в экономическом суде и сопровождаем процесс взыскания.</p>
       </div>
       <div class="step-card">
         <div class="step-num">04</div>
         <h3 data-ru="Исполнение решения" data-uz="Карорни ижро этиш">Исполнение решения</h3>
-        <p data-ru="Контролируем исполнительное производство и работу с уполномоченными органами." data-uz="Ижро ишlarini va vakolatli organlar bilan ishlashni nazorat qilamiz.">Контролируем исполнительное производство и работу с уполномоченными органами.</p>
+        <p data-ru="Контролируем исполнительное производство и работу с уполномоченными органами." data-uz="Ижро ишларини ва ваколатли органлар билан ишлашни назорат киламиз.">Контролируем исполнительное производство и работу с уполномоченными органами.</p>
       </div>
     </div>
 
@@ -1143,7 +286,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="when" id="when">
   <div class="section-inner">
     <h2 class="section-title" data-ru="Когда обращаться к юристам" data-uz="Юристларга кай вакт мурожаат килиш керак">Когда обращаться к юристам</h2>
-    <p class="section-desc" data-ru="Своевременное обращение значительно повышает шансы на возврат средств:" data-uz="Уз вактida murojaatqilish mablaglarni qaytarish imkoniyatini sezilarli darajada oshiradi:">Своевременное обращение значительно повышает шансы на возврат средств:</p>
+    <p class="section-desc" data-ru="Своевременное обращение значительно повышает шансы на возврат средств:" data-uz="Уз вактида мурожаат килиш маблагларни кайтариш имкониятини сезиларли даражада оширади:">Своевременное обращение значительно повышает шансы на возврат средств:</p>
     <div class="when-grid">
       <div class="when-item">
         <div class="when-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
@@ -1151,7 +294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="when-item">
         <div class="when-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <span data-ru="При отказе контрагента исполнять обязательства" data-uz="Контрагент мажбуриятларni bajarishdan bosh tortganda">При отказе контрагента исполнять обязательства</span>
+        <span data-ru="При отказе контрагента исполнять обязательства" data-uz="Контрагент мажбуриятларни бажаришдан бош тортганда">При отказе контрагента исполнять обязательства</span>
       </div>
       <div class="when-item">
         <div class="when-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
@@ -1163,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="when-item">
         <div class="when-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <span data-ru="Перед списанием дебиторской задолженности" data-uz="Дебиторлик карзини хисобдан чикаришdan oldin">Перед списанием дебиторской задолженности</span>
+        <span data-ru="Перед списанием дебиторской задолженности" data-uz="Дебиторлик карзини хисобдан чикаришдан олдин">Перед списанием дебиторской задолженности</span>
       </div>
       <div class="when-item">
         <div class="when-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
@@ -1171,11 +314,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="when-item">
         <div class="when-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <span data-ru="Перед обращением в суд" data-uz="Sudga murojaat etishdan oldin">Перед обращением в суд</span>
+        <span data-ru="Перед обращением в суд" data-uz="Судга мурожаат этишдан олдин">Перед обращением в суд</span>
       </div>
       <div class="when-item">
         <div class="when-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-        <span data-ru="При риске банкротства контрагента" data-uz="Контрагент банкротлик хавфи борida">При риске банкротства контрагента</span>
+        <span data-ru="При риске банкротства контрагента" data-uz="Контрагент банкротлик хавфи борида">При риске банкротства контрагента</span>
       </div>
     </div>
   </div>
@@ -1185,7 +328,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="trust" id="clients">
   <div class="section-inner">
     <h2 class="section-title" data-ru="Доверие и опыт" data-uz="Ишонч ва тажриба">Доверие и опыт</h2>
-    <p class="section-desc" data-ru="Компании и бренды, с которыми мы сотрудничали по оказанию юридических услуг:" data-uz="Юридик хизматлар курсатиш буйича хамkorlik qilgan kompaniyalar va brendlar:">Компании и бренды, с которыми мы сотрудничали по оказанию юридических услуг:</p>
+    <p class="section-desc" data-ru="Компании и бренды, с которыми мы сотрудничали по оказанию юридических услуг:" data-uz="Юридик хизматлар курсатиш буйича хамкорлик килган компаниялар ва брендлар:">Компании и бренды, с которыми мы сотрудничали по оказанию юридических услуг:</p>
     <div class="clients-grid">
       <div class="client-item">AVOBANK</div>
       <div class="client-item">OLCHA SAVDO</div>
@@ -1209,7 +352,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta" id="contact">
   <div class="cta-inner">
     <h2 class="cta-title" data-ru="Нужно взыскать задолженность?" data-uz="Карзни ундириш керакми?">Нужно взыскать задолженность?</h2>
-    <p class="cta-desc" data-ru="Оставьте заявку и получите консультацию по перспективам взыскания долга, судебным рискам и возможным способам защиты интересов вашего бизнеса." data-uz="Аризангизни колдиринг ва карзni undirish istiqbollari, sud xatarlari va biznesingiz manfaatlarini himoya qilishning mumkin bo'lgan usullari bo'yicha maslahat oling.">Оставьте заявку и получите консультацию по перспективам взыскания долга, судебным рискам и возможным способам защиты интересов вашего бизнеса.</p>
+    <p class="cta-desc" data-ru="Оставьте заявку и получите консультацию по перспективам взыскания долга, судебным рискам и возможным способам защиты интересов вашего бизнеса." data-uz="Аризангизни колдиринг ва карзни ундириш истикболлари, суд хатарлари ва бизнесингиз манфаатларини химоя килишнинг мумкин булган усуллари буйича маслахат олинг.">Оставьте заявку и получите консультацию по перспективам взыскания долга, судебным рискам и возможным способам защиты интересов вашего бизнеса.</p>
     <div class="form-wrap">
       <h3 class="form-title" data-ru="Оставьте заявку" data-uz="Аризангизни колдиринг">Оставьте заявку</h3>
       <div class="form-group">
@@ -1217,7 +360,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <input type="text" id="f-name" placeholder="Ваше имя" data-ph-ru="Ваше имя" data-ph-uz="Исмингиз">
       </div>
       <div class="form-group">
-        <label data-ru="Номер телефона *" data-uz="Телефон рақами *">Номер телефона *</label>
+        <label data-ru="Номер телефона *" data-uz="Телефон раками *">Номер телефона *</label>
         <input type="tel" id="f-phone" value="+998" placeholder="+998">
         <div class="form-hint" data-ru="Формат: +998 XX XXX-XX-XX (введите полностью)" data-uz="Формат: +998 XX XXX-XX-XX (тулик киритинг)">Формат: +998 XX XXX-XX-XX (введите полностью)</div>
       </div>
@@ -1226,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <textarea id="f-message" placeholder="Кратко опишите задолженность или ситуацию..." data-ph-ru="Кратко опишите задолженность или ситуацию..." data-ph-uz="Карз ёки вазиятни кискача тушунтиринг..."></textarea>
       </div>
       <button class="btn-submit" onclick="submitForm()" data-ru="Отправить" data-uz="Юбориш">Отправить</button>
-      <p class="form-privacy" data-ru="Нажимая кнопку, вы соглашаетесь на обработку ваших данных." data-uz="Тугмани босиб, маълумотларингизни кайта ишлашga roziligingiznI bildirasiz.">Нажимая кнопку, вы соглашаетесь на обработку ваших данных.</p>
+      <p class="form-privacy" data-ru="Нажимая кнопку, вы соглашаетесь на обработку ваших данных." data-uz="Тугмани босиб, маълумотларингизни кайта ишлашга розилигингизни билдирасиз.">Нажимая кнопку, вы соглашаетесь на обработку ваших данных.</p>
     </div>
   </div>
 </section>
@@ -1234,21 +377,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- FAQ -->
 <section class="faq" id="faq">
   <div class="section-inner">
-    <h2 class="section-title" data-ru="Часто задаваемые вопросы" data-uz="Кисман бериладиган саволлар">Часто задаваемые вопросы</h2>
+    <h2 class="section-title" data-ru="Часто задаваемые вопросы" data-uz="Куп бериладиган саволлар">Часто задаваемые вопросы</h2>
     <div class="faq-list">
       <div class="faq-item open">
         <div class="faq-q" onclick="toggleFaq(this)">
           <span data-ru="Можно ли взыскать задолженность без суда?" data-uz="Судсиз карзни ундириш мумкинми?">Можно ли взыскать задолженность без суда?</span>
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </div>
-        <div class="faq-a" data-ru="Да. В ряде случаев вопрос удаётся решить на стадии переговоров и претензионной работы." data-uz="Xa. Баъзи холларда масалани музокара ва даъво иши боскичида хал килиш мумкин.">Да. В ряде случаев вопрос удаётся решить на стадии переговоров и претензионной работы.</div>
+        <div class="faq-a" data-ru="Да. В ряде случаев вопрос удаётся решить на стадии переговоров и претензионной работы." data-uz="Ха. Баъзи холларда масалани музокара ва даъво иши боскичида хал килиш мумкин.">Да. В ряде случаев вопрос удаётся решить на стадии переговоров и претензионной работы.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           <span data-ru="Работаете только в Ташкенте?" data-uz="Факат Тошкентдами ишлайсизлар?">Работаете только в Ташкенте?</span>
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </div>
-        <div class="faq-a" data-ru="Нет, мы работаем по всему Узбекистану и сопровождаем дела в судах различных регионов." data-uz="Йук, биз бутун Узбекистон бУйлаб ишлаймиз ва турли вилоятлар судларидаги ишlarni kuzatamiz.">Нет, мы работаем по всему Узбекистану и сопровождаем дела в судах различных регионов.</div>
+        <div class="faq-a" data-ru="Нет, мы работаем по всему Узбекистану и сопровождаем дела в судах различных регионов." data-uz="Йук, биз бутун Узбекистон буйлаб ишлаймиз ва турли вилоятлар судларидаги ишларни кузатамиз.">Нет, мы работаем по всему Узбекистану и сопровождаем дела в судах различных регионов.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
@@ -1262,14 +405,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span data-ru="Можно ли взыскать долг с иностранной компании?" data-uz="Хорижий компаниядан карзни ундириш мумкинми?">Можно ли взыскать долг с иностранной компании?</span>
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </div>
-        <div class="faq-a" data-ru="Да, в зависимости от юрисдикции и условий договора. Мы анализируем каждый случай индивидуально." data-uz="Xa, юрисдикция ва шартнома шартларига кура. Биз хар бир холатни алохида тахлил киламиз.">Да, в зависимости от юрисдикции и условий договора. Мы анализируем каждый случай индивидуально.</div>
+        <div class="faq-a" data-ru="Да, в зависимости от юрисдикции и условий договора. Мы анализируем каждый случай индивидуально." data-uz="Ха, юрисдикция ва шартнома шартларига кура. Биз хар бир холатни алохида тахлил киламиз.">Да, в зависимости от юрисдикции и условий договора. Мы анализируем каждый случай индивидуально.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
           <span data-ru="Сколько занимает процесс взыскания?" data-uz="Ундириш жараёни канча вакт олади?">Сколько занимает процесс взыскания?</span>
           <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </div>
-        <div class="faq-a" data-ru="Сроки зависят от сложности дела. Досудебное урегулирование — от 2 до 8 недель, судебное разбирательство — от 2 до 6 месяцев." data-uz="Муддатлар ишнинг мураккаблигига богlic. Sudgacha хал kilish — 2 dan 8 haftaga, sud ishlarini ko'rish — 2 dan 6 oygacha.">Сроки зависят от сложности дела. Досудебное урегулирование — от 2 до 8 недель, судебное разбирательство — от 2 до 6 месяцев.</div>
+        <div class="faq-a" data-ru="Сроки зависят от сложности дела. Досудебное урегулирование — от 2 до 8 недель, судебное разбирательство — от 2 до 6 месяцев." data-uz="Муддатлар ишнинг мураккаблигига боглик. Судгача хал килиш — 2 дан 8 хафтага, суд ишларини куриш — 2 дан 6 ойгача.">Сроки зависят от сложности дела. Досудебное урегулирование — от 2 до 8 недель, судебное разбирательство — от 2 до 6 месяцев.</div>
       </div>
     </div>
   </div>
@@ -1287,7 +430,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="footer-tagline" data-ru="Юридическое сопровождение взыскания задолженности и хозяйственных споров в Узбекистане." data-uz="Узбекистонда карзни ундириш ва хужалик низолари буйича юридик куллаб-кувватлаш.">Юридическое сопровождение взыскания задолженности и хозяйственных споров в Узбекистане.</p>
       </div>
       <div class="footer-contacts">
-        <a href="https://maps.google.com/?q=Ташкентская+область+Кибрайский+район+Чиланзар-2+107" target="_blank" class="footer-contact">
+        <a href="https://maps.google.com/?q=Ташкент+Чиланзар+107" target="_blank" class="footer-contact">
           <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           <span data-ru="Ташкентская область, Кибрайский район, поселок Чиланзар-2, 107" data-uz="Тошкент вилояти, Кибрай тумани, Чиланзор-2 посёлкаси, 107">Ташкентская область, Кибрайский район, поселок Чиланзар-2, 107</span>
         </a>
@@ -1326,105 +469,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="success-msg">
       <svg width="60" height="60" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       <h3 data-ru="Заявка отправлена!" data-uz="Ариза юборилди!">Заявка отправлена!</h3>
-      <p data-ru="Мы свяжемся с вами в ближайшее время для консультации." data-uz="Маслахат учун якин орада сиз билан боglanamiz.">Мы свяжемся с вами в ближайшее время для консультации.</p>
+      <p data-ru="Мы свяжемся с вами в ближайшее время для консультации." data-uz="Маслахат учун якин орада сиз билан богланамиз.">Мы свяжемся с вами в ближайшее время для консультации.</p>
     </div>
   </div>
 </div>
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
-// ===== LANGUAGE SYSTEM =====
-let currentLang = 'ru';
-
-function setLang(lang) {
-  currentLang = lang;
-  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-    const val = el.getAttribute('data-' + lang);
-    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      el.placeholder = el.getAttribute('data-ph-' + lang) || val;
-    } else {
-      el.innerHTML = val;
-    }
-  });
-  document.querySelectorAll('[data-ph-' + lang + ']').forEach(el => {
-    el.placeholder = el.getAttribute('data-ph-' + lang);
-  });
-  document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
-  document.getElementById('btn-uz').classList.toggle('active', lang === 'uz');
-
-  // Try Google Translate for full page auto-translate
-  if (lang !== 'ru') {
-    try {
-      var sel = document.querySelector('.goog-te-combo');
-      if (sel) {
-        sel.value = lang === 'uz' ? 'uz' : 'ru';
-        sel.dispatchEvent(new Event('change'));
-      }
-    } catch(e) {}
-  }
-}
-
-// ===== FAQ =====
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-
-// ===== FORM SUBMIT via Telegram Bot =====
-async function submitForm() {
-  const name = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const message = document.getElementById('f-message').value.trim();
-
-  if (!name) { alert(currentLang === 'uz' ? 'Исмингизни киритинг' : 'Введите ваше имя'); return; }
-  if (!phone || phone === '+998') { alert(currentLang === 'uz' ? 'Телефон ракамини киритинг' : 'Введите номер телефона'); return; }
-
-  const text = `🔔 Новая заявка с сайта Business Law Consulting\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n💬 Сообщение: ${message || '—'}`;
-
-  const TOKEN = '8830532011:AAGJ6A7LZmmWT1c2Qi2YxZRJHpOd62FNN1w';
-  const CHAT_ID = '-5102240344';
-
-  try {
-    const res = await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'HTML' })
-    });
-    const data = await res.json();
-    if (data.ok) {
-      document.getElementById('f-name').value = '';
-      document.getElementById('f-phone').value = '+998';
-      document.getElementById('f-message').value = '';
-      document.getElementById('modal').classList.add('open');
-    } else {
-      alert('Ошибка отправки. Позвоните нам: +998 90 888-44-66');
-    }
-  } catch(e) {
-    alert('Ошибка соединения. Позвоните нам: +998 90 888-44-66');
-  }
-}
-
-function closeModal() {
-  document.getElementById('modal').classList.remove('open');
-}
-
-document.getElementById('modal').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
-
-// Smooth scroll for anchors
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>
